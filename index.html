@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sumit Sharma – Web Developer</title>
+
+  <!-- Clean minimal fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- LEFT SIDEBAR (Fixed on large screens) -->
+  <aside class="sidebar">
+    <div class="name">Sumit Sharma</div>
+    <div class="role">Web Developer</div>
+
+    <nav class="nav">
+      <a class="nav__item active" href="#about" data-target="about">About</a>
+      <a class="nav__item" href="#experience" data-target="experience">Experience</a>
+      <a class="nav__item" href="#projects" data-target="projects">Projects</a>
+      <a class="nav__item" href="#contact" data-target="contact">Contact</a>
+    </nav>
+
+    <!-- buttons -->
+    <button id="themeToggle" class="btn-icon">🌙</button>
+    <button id="downloadResume" class="btn">Download Resume</button>
+
+    <!-- socials -->
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/sumit-sharma-58b169350" target="_blank">LinkedIn</a>
+      <a href="https://github.com/sumit-sharma99111" target="_blank">GitHub</a>
+      <a href="https://x.com/SharmaSumi96054" target="_blank">X</a>
+     
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT (scrollable area) -->
+  <main class="content">
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <h1 class="title">Hi, I’m <span class="accent">Sumit Sharma</span>.</h1>
+      <p class="subtitle">Web Developer</p>
+
+      <div id="typewriter" class="typewriter"></div>
+
+      <p class="text">
+        I’m a front-end developer passionate about building clean, responsive and intuitive web interfaces.
+        I focus on writing maintainable code, improving UX, and turning ideas into real usable products.
+        I love exploring new tech and building side projects.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section reveal">
+      <h2 class="heading">Experience</h2>
+      <p class="text">
+        <strong>Fresher — Front-End Developer</strong><br>
+        Actively looking for opportunities.  
+        Self-taught developer with practical experience building small apps and UI components.
+        Completed projects include games, utilities, and responsive landing pages.
+      </p>
+
+      <p class="text" style="margin-top:16px;">
+        <strong>Personal Projects & Learning</strong><br>
+        2023 — Present<br>
+        Focused on improving JavaScript fundamentals, CSS layouts, and accessible markup.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <h2 class="heading">Projects</h2>
+
+      <div class="projects">
+
+        <div class="project" tabindex="0">
+          <div class="p-title">Project 1 — Tic Tac Toe</div>
+          <div class="p-desc">Vanilla JS game with responsive design</div>
+          <a href="https://github.com/sumit-sharma99111/Tic-Tac-Toe-project" target="_blank" class="p-link">GitHub</a>
+        </div>
+
+        <div class="project" tabindex="0">
+          <div class="p-title">Project 2 — Clock App</div>
+          <div class="p-desc">Digital clock with animations</div>
+          <a href="https://github.com/sumit-sharma99111/clock-project-" target="_blank" class="p-link">GitHub</a>
+        </div>
+
+        <div class="project" tabindex="0">
+          <div class="p-title">Project 3 — Portfolio Template</div>
+          <div class="p-desc">Clean responsive template built by me</div>
+          <a href="" target="blank"></a>
+          <span class="p-link disabled">GitHub</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <h2 class="heading">Contact</h2>
+      <p class="text">
+        Email → <a href="mailto:sumitsharma15272004@gmail.com">sumitsharma15272004@gmail.com</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Sumit Sharma
+    </footer>
+
+  </main>
+
+</body>
+</html>

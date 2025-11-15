@@ -1,0 +1,236 @@
+/* ---------------------------------------------------
+   ULTRA MINIMAL DESIGN — Very light, very quiet
+   --------------------------------------------------- */
+
+/* Colors (change anytime easily) */
+:root{
+  --bg: #ffffff;
+  --text: #222;
+  --muted: #777;
+  --accent: #007aff;
+
+  --dark-bg: #0b0f15;
+  --dark-text:#e7edf3;
+  --dark-muted:#9aa5b1;
+  --dark-accent:#4db8ff;
+
+  --sidebar-width: 260px;
+}
+
+/* Dark mode */
+body[data-theme="dark"]{
+  --bg: var(--dark-bg);
+  --text: var(--dark-text);
+  --muted: var(--dark-muted);
+  --accent: var(--dark-accent);
+}
+
+/* Base styling */
+body{
+  margin:0;
+  display:flex;
+  font-family: Inter, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* -----------------------------------------
+   LEFT SIDEBAR (simple clean vertical stack)
+   ----------------------------------------- */
+.sidebar{
+  width:var(--sidebar-width);
+  padding:40px 24px;
+  position:fixed;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+.name{
+  font-size:20px;
+  font-weight:600;
+}
+
+.role{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.nav{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.nav__item{
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:500;
+  transition:0.2s;
+}
+
+.nav__item:hover{
+  color:var(--text);
+}
+
+.nav__item.active{
+  color:var(--accent);
+}
+
+.btn{
+  padding:8px 14px;
+  border-radius:6px;
+  border:1px solid var(--accent);
+  background:transparent;
+  color:var(--accent);
+  cursor:pointer;
+  font-size:14px;
+}
+
+.btn-icon{
+  border:0;
+  background:transparent;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.socials{
+  display:flex;
+  flex-direction:column;
+  position: relative;
+  bottom: 100px;
+  gap:8px;
+  margin-top:auto;
+}
+
+.socials a{
+    text-decoration:none;
+    color:var(--muted);
+    
+    transition:0.2s;
+}
+
+.disabled{
+  opacity:0.5;
+}
+
+/* -----------------------------------------
+   MAIN CONTENT
+   ----------------------------------------- */
+.content{
+  margin-left:calc(var(--sidebar-width) + 40px);
+  padding:60px 60px 120px;
+  max-width:750px;
+}
+
+/* Sections */
+.section{margin-bottom:70px}
+
+.title{
+  font-size:36px;
+  margin:0;
+}
+
+.accent{color:var(--accent)}
+
+.subtitle{
+  margin:6px 0 16px;
+  color:var(--muted);
+  font-size:18px;
+}
+
+.typewriter{
+  font-family:"Source Code Pro", monospace;
+  min-height:22px;
+  color:var(--accent);
+  margin-bottom:22px;
+}
+
+.text{
+  color:var(--muted);
+  line-height:1.6;
+  font-size:15px;
+}
+.text a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+/* Section headings */
+.heading{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:16px;
+}
+
+/* -----------------------------------------
+   PROJECTS (simple cards)
+   ----------------------------------------- */
+.projects{
+  display:grid;
+  gap:16px;
+}
+
+.project{
+  padding:18px;
+  border-radius:8px;
+  background:rgba(0,0,0,0.02);
+  cursor:pointer;
+  transition:0.3s;
+  outline:none;
+}
+
+body[data-theme="dark"] .project{
+  background:rgba(255,255,255,0.05);
+}
+
+.project:hover{
+  transform:translateY(-4px);
+}
+
+.p-title{font-weight:600;margin-bottom:6px}
+.p-desc{color:var(--muted);margin-bottom:10px}
+.p-link{font-size:14px;color:var(--accent)}
+
+/* -----------------------------------------
+   FOOTER
+   ----------------------------------------- */
+.footer{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:40px;
+}
+
+/* -----------------------------------------
+   REVEAL ANIMATION (fade-up)
+   ----------------------------------------- */
+.reveal{
+  opacity:0;
+  transform:translateY(10px);
+  transition:0.5s;
+}
+.reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+
+/* -----------------------------------------
+   RESPONSIVE
+   ----------------------------------------- */
+@media (max-width:800px){
+  .sidebar{
+    position:static;
+    width:100%;
+    height:auto;
+    flex-direction:row;
+    align-items:center;
+    gap:20px;
+    padding:20px;
+  }
+  .content{
+    margin:0;
+    padding:30px 20px 100px;
+  }
+  .socials{display:none;}
+}
