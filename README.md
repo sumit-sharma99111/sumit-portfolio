@@ -6,12 +6,7 @@ The design is minimal, clean, and fully responsive — inspired by modern develo
 
 ---
 
-## 🚀 Live Website
-🔗 **View Portfolio:** *https://your-username.github.io/your-repo-name*
 
-> Replace the link above with your actual GitHub Pages URL.
-
----
 
 ## 📄 About This Portfolio
 This portfolio is built using **pure HTML, CSS, and JavaScript** — no frameworks and no libraries (except jsPDF for generating resume).
